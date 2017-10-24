@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
     Text,
     View,
@@ -25,9 +26,9 @@ class TabBar extends React.Component {
 
 
     static propTypes = {
-        goToPage: React.PropTypes.func,
-        activeTab: React.PropTypes.number,
-        tabs: React.PropTypes.array,
+        goToPage: PropTypes.func,
+        activeTab: PropTypes.number,
+        tabs: PropTypes.array,
     };
 
     componentDidMount() {
@@ -92,7 +93,7 @@ class TabBar extends React.Component {
                         return <TouchableOpacity ref={(component) => this.tabComponent.push(component)}
                                                  key={tab} onPress={() => this._onIconPress(i)}
                                                  style={[styles.tab,{backgroundColor: (this.props.activeTab === i? '#f1f1f1': '#fff')}]}>
-                            <Text style={styles.emoji }>{this.props.tabs[i]}</Text>
+                            <Text style={{fontSize: 25}}>{this.props.tabs[i]}</Text>
                         </TouchableOpacity>;
                     })}
                 </ScrollView>
