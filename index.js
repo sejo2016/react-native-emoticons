@@ -355,17 +355,7 @@ class Emoticons extends React.Component {
         return (
             (!this.state.showWV) ?
                 <Animated.View style={[this.props.style,styles.container,{bottom: this.state.position}]}>
-                    <ScrollableTabView
-                        tabBarPosition='overlayBottom'
-                        renderTabBar={() => <TabBar {...this.props} onPlusPress={this._onPlusPress.bind(this)}/>}
-                        initialPage={this.state.groupIndex}
-                        onChangeTab={this._onChangeTabMain.bind(this)}
-                        tabBarActiveTextColor="#fc7d30"
-                        style={styles.scrollTable}
-                        tabBarUnderlineStyle={{backgroundColor:'#fc7d30',height: 2}}
-                        >
-                        {groupsView}
-                    </ScrollableTabView>
+                    {groupsView}
 
                 </Animated.View> :
                 <Animated.View style={[styles.wvContainer,{bottom: this.state.wvPosition}]}>
