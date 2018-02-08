@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
     container: {
         backgroundColor: '#fff',
-        height: 300,
+        height: 250,
         width: width,
         position: 'absolute',
         bottom: 0,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         width: width
     },
     scrollGroupTable: {
-        paddingBottom: 50
+//         paddingBottom: 50
     },
     cateView: {
         flex: 1,
